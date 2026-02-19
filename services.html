@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="hero-section" style="padding: 100px 0 60px;">
+    <div class="container">
+        <h1 class="hero-title">Our Services</h1>
+        <p class="hero-subtitle">Comprehensive AI solutions for personal health monitoring.</p>
+    </div>
+</div>
+
+<div class="container mb-5">
+    <div class="row g-4">
+        <!-- Service 1 -->
+        <div class="col-md-4">
+            <div class="card-custom h-100">
+                <div class="text-center mb-4">
+                    <span class="d-inline-block p-3 rounded-circle bg-primary bg-opacity-10 text-primary">
+                        <i class="fas fa-dna fa-2x"></i>
+                    </span>
+                </div>
+                <h3 class="text-center mb-3">Diabetes Risk Prediction</h3>
+                <p class="text-muted text-center">
+                    Our flagship service utilizes a robust Random Forest algorithm to analyze 8 key metabolic indicators
+                    and predict the likelihood of diabetes with high accuracy.
+                </p>
+                <ul class="list-unstyled mt-4 text-muted">
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Instant Analysis</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i> 95% Accuracy Rate</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i> PDF Report Generation</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="col-md-4">
+            <div class="card-custom h-100">
+                <div class="text-center mb-4">
+                    <span class="d-inline-block p-3 rounded-circle bg-primary bg-opacity-10 text-primary">
+                        <i class="fas fa-project-diagram fa-2x"></i>
+                    </span>
+                </div>
+                <h3 class="text-center mb-3">Explainable AI (XAI)</h3>
+                <p class="text-muted text-center">
+                    We don't just give you a score; we tell you why. Our SHAP-integrated system breaks down the
+                    contributing factors to your health risk.
+                </p>
+                <ul class="list-unstyled mt-4 text-muted">
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Visual Impact Charts</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Feature Importance</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Transparent Logic</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="col-md-4">
+            <div class="card-custom h-100">
+                <div class="text-center mb-4">
+                    <span class="d-inline-block p-3 rounded-circle bg-primary bg-opacity-10 text-primary">
+                        <i class="fas fa-shield-alt fa-2x"></i>
+                    </span>
+                </div>
+                <h3 class="text-center mb-3">Health Data Security</h3>
+                <p class="text-muted text-center">
+                    Your health data is sensitive. We employ state-of-the-art encryption and privacy standards to ensure
+                    your information remains confidential.
+                </p>
+                <ul class="list-unstyled mt-4 text-muted">
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i> End-to-End Encryption</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Anonymous Processing</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i> GDPR Compliant</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

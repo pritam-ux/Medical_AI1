@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="hero-section">
+    <div class="container">
+        <h1 class="hero-title">Future of Healthcare AI</h1>
+        <p class="hero-subtitle">Advanced machine learning algorithms to predict and monitor diabetes risk with high
+            precision.</p>
+
+        {% if current_user.is_authenticated %}
+        <a href="{{ url_for('dashboard') }}" class="btn btn-primary-custom" style="width: auto; padding: 1rem 3rem;">Go
+            to Dashboard</a>
+        {% else %}
+        <div class="d-flex justify-content-center gap-3">
+            <a href="{{ url_for('register') }}" class="btn btn-primary-custom" style="width: auto;">Get Started</a>
+            <a href="{{ url_for('login') }}" class="btn btn-outline-primary"
+                style="padding: 0.75rem 2rem; border-radius: 12px; font-weight: 600;">Login</a>
+        </div>
+        {% endif %}
+    </div>
+</div>
+
+<div class="container mb-5">
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="card-custom text-center h-100">
+                <div class="mb-3" style="font-size: 2.5rem;">🚀</div>
+                <h3>Fast Analysis</h3>
+                <p class="text-muted">Instant prediction results powered by optimized Random Forest algorithms.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card-custom text-center h-100">
+                <div class="mb-3" style="font-size: 2.5rem;">🛡️</div>
+                <h3>Secure Data</h3>
+                <p class="text-muted">Your medical data is processed securely and privately.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card-custom text-center h-100">
+                <div class="mb-3" style="font-size: 2.5rem;">🔍</div>
+                <h3>Explainable AI</h3>
+                <p class="text-muted">Understand the "Why" behind every prediction with SHAP analysis.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

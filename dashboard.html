@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="dashboard-container">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="card-custom">
+                    <div class="text-center mb-5">
+                        <h2 class="mb-2">Patient Health Data</h2>
+                        <p class="text-muted">Enter the clinical parameters below for risk assessment.</p>
+                    </div>
+
+                    <form action="{{ url_for('predict') }}" method="POST">
+                        <div class="row g-4">
+                            <!-- Pregnancies -->
+                            <div class="col-md-6">
+                                <label class="input-label">Pregnancies</label>
+                                <input type="number" name="pregnancies" class="form-control" min="0" value="0" required>
+                            </div>
+                            <!-- Glucose -->
+                            <div class="col-md-6">
+                                <label class="input-label">Glucose Level (mg/dL)</label>
+                                <input type="number" name="glucose" class="form-control" min="0" value="100" required>
+                            </div>
+                            <!-- Blood Pressure -->
+                            <div class="col-md-6">
+                                <label class="input-label">Blood Pressure (mm Hg)</label>
+                                <input type="number" name="bp" class="form-control" min="0" value="70" required>
+                            </div>
+                            <!-- Skin Thickness -->
+                            <div class="col-md-6">
+                                <label class="input-label">Skin Thickness (mm)</label>
+                                <input type="number" name="skin" class="form-control" min="0" value="20" required>
+                            </div>
+                            <!-- Insulin -->
+                            <div class="col-md-6">
+                                <label class="input-label">Insulin Level (mu U/ml)</label>
+                                <input type="number" name="insulin" class="form-control" min="0" value="80" required>
+                            </div>
+                            <!-- BMI -->
+                            <div class="col-md-6">
+                                <label class="input-label">BMI</label>
+                                <input type="number" name="bmi" class="form-control" step="0.1" min="0" value="25.0"
+                                    required>
+                            </div>
+                            <!-- Diabetes Pedigree Function -->
+                            <div class="col-md-6">
+                                <label class="input-label">Diabetes Pedigree Function</label>
+                                <input type="number" name="dpf" class="form-control" step="0.001" min="0" value="0.5"
+                                    required>
+                            </div>
+                            <!-- Age -->
+                            <div class="col-md-6">
+                                <label class="input-label">Age (years)</label>
+                                <input type="number" name="age" class="form-control" min="0" value="30" required>
+                            </div>
+                        </div>
+
+                        <div class="mt-5 text-center">
+                            <button type="submit" class="btn btn-primary-custom"
+                                style="padding: 1rem 4rem; font-size: 1.1rem;">
+                                Analyze Risk <i class="fas fa-arrow-right ms-2"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
